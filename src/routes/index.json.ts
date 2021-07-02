@@ -1,6 +1,6 @@
 import { getPosts } from '$lib/api/get-posts';
+import { getProjects } from '$lib/api/get-projects';
 import { process } from '$lib/utils/markdown';
-import fs from 'fs';
 
 function getHero() {
   const { metadata, content } = process('src/content/sections/hero.md');
@@ -13,18 +13,7 @@ function getAbout() {
 }
 
 function getFeaturedProjects() {
-  let projects = fs
-    .readdirSync(`src/content/projects`)
-    .filter((fileName) => /.+\.md$/.test(fileName))
-    .map((fileName) => {
-      const { metadata, content } = process(`src/content/projects/${fileName}`);
-      return {
-        metadata,
-        content,
-      };
-    });
-
-  return projects.filter((project) => project.metadata.featured);
+  return getProjects().filter((project) => project.metadata.featured);
 }
 
 function getRecentPosts() {
