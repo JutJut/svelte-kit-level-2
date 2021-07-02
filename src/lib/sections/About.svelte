@@ -7,8 +7,6 @@
   export let title;
   export let techs;
   export let content;
-
-  console.log('techs in about', techs);
 </script>
 
 <Section id="about">
