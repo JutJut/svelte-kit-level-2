@@ -1,0 +1,18 @@
+// flex
+@mixin flex-center
+  display: flex
+  justify-content: center
+  align-items: center
+
+// media queries
+@mixin mq-gt-xs
+  @media screen and (min-width: 600px)
+    @content
+
+@mixin mq-gt-sm
+  @media screen and (min-width: 960px)
+    @content
+
+@mixin mq-lt-md
+  @media screen and (max-width: 959px)
+    @content

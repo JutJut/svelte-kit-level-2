@@ -1,0 +1,21 @@
+@import './lib/styles/variables'
+@import './lib/styles/typography'
+
+*
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+#svelte
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+
+body
+  background-color: var(--bg-color)
+  color: var(--body-color)
+  transition: color var(--transition-normal), background-color var(--transition-normal)
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif
+  margin: 0
+  padding: 0
+  line-height: 1.5
