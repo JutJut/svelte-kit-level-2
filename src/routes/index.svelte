@@ -3,6 +3,7 @@
   import About from '$lib/sections/About.svelte';
   import Contact from '$lib/sections/Contact.svelte';
   import Hero from '$lib/sections/Hero.svelte';
+  import RecentPosts from '$lib/sections/RecentPosts.svelte';
 
   export const prerender = true;
 
@@ -16,9 +17,7 @@
 
 <script lang="ts">
   export let data;
-  const { hero, about, contact, projects } = data;
-
-  console.log('Projects', projects);
+  const { hero, about, contact, projects, recentPosts: posts } = data;
 </script>
 
 <svelte:head>
@@ -33,6 +32,8 @@
 />
 
 <About title={about.title} techs={about.techs} content={about.content} />
+
+<RecentPosts {posts} />
 
 <Contact
   address={contact.address}
