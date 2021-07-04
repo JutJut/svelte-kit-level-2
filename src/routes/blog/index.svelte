@@ -20,7 +20,7 @@
   <h1>SvelteKit Blog</h1>
   <p class="info">{posts.length} posts.</p>
   {#each posts as post}
-    <a href={`${base}/${post.slug}`}>
+    <a href={`${base}/blog/${post.slug}`}>
       <h2 class="title">{post.metadata.title}</h2>
       <p>{post.metadata.description}</p>
     </a>
