@@ -13,8 +13,6 @@
 
 <script>
   export let projects;
-
-  console.log('PRO', projects);
 </script>
 
 <svelte:head>

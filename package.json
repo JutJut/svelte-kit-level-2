@@ -1,4 +1,5 @@
 {
+  "homepage": "https://github.com/JutJut/svelte-kit-level-2/",
   "name": "svelte-kit-level-2",
   "version": "0.0.1",
   "author": "Knochenmark",
@@ -28,7 +29,7 @@
     "prettier": "~2.2.1",
     "prettier-plugin-svelte": "^2.2.0",
     "prism-svelte": "^0.4.7",
-    "prismjs": "^1.23.0",
+    "prismjs": "^1.24.1",
     "rehype-highlight": "^4.1.0",
     "rehype-stringify": "^8.0.0",
     "remark-frontmatter": "^3.0.0",
