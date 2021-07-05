@@ -1,6 +1,7 @@
 <script context="module" lang="ts">
   import { base } from '$app/paths';
   import About from '$lib/sections/About.svelte';
+  import CardGrid from '$lib/sections/CardGrid.svelte';
   import Contact from '$lib/sections/Contact.svelte';
   import Hero from '$lib/sections/Hero.svelte';
   import RecentPosts from '$lib/sections/RecentPosts.svelte';
@@ -17,7 +18,7 @@
 
 <script lang="ts">
   export let data;
-  const { hero, about, contact, projects, recentPosts: posts } = data;
+  const { hero, about, cardGrid, contact, projects, recentPosts: posts } = data;
 </script>
 
 <svelte:head>
@@ -32,6 +33,8 @@
 />
 
 <About title={about.title} techs={about.techs} content={about.content} />
+
+<CardGrid cards={cardGrid.cards} content={cardGrid.content} />
 
 <RecentPosts {posts} />
 
