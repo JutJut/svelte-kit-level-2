@@ -12,6 +12,11 @@ function getAbout() {
   return { ...metadata, content };
 }
 
+function getCards() {
+  const { metadata, content } = process('src/content/sections/cards.md');
+  return { ...metadata, content };
+}
+
 function getFeaturedProjects() {
   return getProjects().filter((project) => project.metadata.featured);
 }
@@ -31,6 +36,7 @@ export function get() {
     body: {
       hero: getHero(),
       about: getAbout(),
+      cardGrid: getCards(),
       projects: getFeaturedProjects(),
       recentPosts: getRecentPosts(),
       contact: getContact(),
