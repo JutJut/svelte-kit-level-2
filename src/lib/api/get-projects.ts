@@ -8,7 +8,7 @@ export function getProjects() {
     .map((fileName) => {
       const { metadata, content } = process(`src/content/projects/${fileName}`);
       return {
-        metadata,
+        ...metadata,
         content,
       };
     });

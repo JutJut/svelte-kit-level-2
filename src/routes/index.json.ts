@@ -18,7 +18,7 @@ function getCards() {
 }
 
 function getFeaturedProjects() {
-  return getProjects().filter((project) => project.metadata.featured);
+  return getProjects().filter((project) => project.featured);
 }
 
 function getRecentPosts() {

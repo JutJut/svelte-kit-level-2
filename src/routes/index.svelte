@@ -3,6 +3,7 @@
   import About from '$lib/sections/About.svelte';
   import CardGrid from '$lib/sections/CardGrid.svelte';
   import Contact from '$lib/sections/Contact.svelte';
+  import FeaturedProjects from '$lib/sections/FeaturedProjects.svelte';
   import Hero from '$lib/sections/Hero.svelte';
   import RecentPosts from '$lib/sections/RecentPosts.svelte';
 
@@ -35,6 +36,8 @@
 <About title={about.title} techs={about.techs} content={about.content} />
 
 <CardGrid cards={cardGrid.cards} content={cardGrid.content} />
+
+<FeaturedProjects {projects} />
 
 <RecentPosts {posts} />
 

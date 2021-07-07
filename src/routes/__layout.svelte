@@ -6,7 +6,7 @@
   import { fas } from '@fortawesome/free-solid-svg-icons';
   import '../app.sass';
 
-  library.add(fab,fas);
+  library.add(fab, fas);
 </script>
 
 <Header />
