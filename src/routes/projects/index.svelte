@@ -22,8 +22,8 @@
 <Section full={true}>
   <Heading1>Projects</Heading1>
   {#each projects as project}
-    <h2 class="title">{project.metadata.title}</h2>
+    <h2 class="title">{project.title}</h2>
     {@html project.content}
-    <TechList techs={project.metadata.techs} />
+    <TechList techs={project.techs} />
   {/each}
 </Section>

@@ -4,8 +4,6 @@
 
   export let project;
 
-  console.log('pro', project);
-
   const { title, techs, demo_link: demoLink, repo_link: repoLink, content } = project;
 </script>
 
