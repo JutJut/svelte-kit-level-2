@@ -1,34 +1,40 @@
 <script lang="ts">
-  import Icon from 'svelte-awesome';
-  import { codepen, github, twitter } from 'svelte-awesome/icons';
+  import { FontAwesomeIcon } from 'fontawesome-svelte';
 
   interface Link {
-    icon: any;
+    icon: string;
+    prefix: string;
     link: string;
   }
 
   export let links: Link[] = [
+    // TODO: Move into a config file
     {
-      icon: twitter,
+      icon: 'twitter',
+      prefix: 'fab', // fab prefix for brands, fas for solid icons
       link: 'https://twitter.com/',
     },
     {
-      icon: github,
-      link: 'https://github.com/knochenmark/gatsby-starter-level-2',
+      icon: 'github',
+      prefix: 'fab',
+      link: 'https://github.com/JutJut/svelte-kit-level-2',
     },
     {
-      icon: codepen,
+      icon: 'codepen',
+      prefix: 'fab',
       link: 'https://codepen.io/',
     },
+    // Add further social links with the icon of choice and link here
+    // check https://fontawesome.com/icons?d=gallery&s=brands for other brand icons
   ];
 </script>
 
 <div class="container">
   <div class="links">
-    {#each links as { link, icon }}
-      <a href={link} target="_blank" rel="noopener" aria-label={`social link to ${link}`}
-        ><Icon data={icon} scale={1.5} /></a
-      >
+    {#each links as { link, prefix, icon }}
+      <a href={link} target="_blank" rel="noopener" aria-label={`social link to ${link}`}>
+        <FontAwesomeIcon icon={[prefix, icon]} size="lg" />
+      </a>
     {/each}
   </div>
 </div>
