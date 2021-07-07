@@ -1,6 +1,7 @@
 <script lang="ts">
   import Heading1 from '$lib/components/Heading1.svelte';
   import Section from '$lib/components/Section.svelte';
+  import { FontAwesomeIcon } from 'fontawesome-svelte';
 
   export let phone;
   export let email;
@@ -14,16 +15,40 @@
   <div class="separator" />
   <div class="contacts">
     <div class="contact">
-      <div class="contact__description">Office Location</div>
-      <span class="contact__form">{address}</span>
+      <FontAwesomeIcon
+        icon={['fas', 'building']}
+        size="lg"
+        fixedWidth={true}
+        style="margin-right: 0.8rem"
+      />
+      <section>
+        <div class="contact__description">Office Location</div>
+        <span class="contact__form">{address}</span>
+      </section>
     </div>
     <div class="contact">
-      <div class="contact__description">My E-Mail</div>
-      <span class="contact__form">{email}</span>
+      <FontAwesomeIcon
+        icon={['fas', 'paper-plane']}
+        size="lg"
+        fixedWidth={true}
+        style="margin-right: 0.8rem"
+      />
+      <section>
+        <div class="contact__description">My E-Mail</div>
+        <span class="contact__form">{email}</span>
+      </section>
     </div>
     <div class="contact">
-      <div class="contact__description">Phone Number</div>
-      <span class="contact__form">{phone}</span>
+      <FontAwesomeIcon
+        icon={['fas', 'mobile-alt']}
+        size="lg"
+        fixedWidth={true}
+        style="margin-right: 0.8rem"
+      />
+      <section>
+        <div class="contact__description">Phone Number</div>
+        <span class="contact__form">{phone}</span>
+      </section>
     </div>
   </div>
 </Section>
@@ -67,6 +92,6 @@
         font-weight: normal
 
       &__form
-        font-size: 0.75rem
+        font-size: 0.8rem
          font-weight: 500
 </style>

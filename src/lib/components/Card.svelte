@@ -2,8 +2,6 @@
   import { FontAwesomeIcon } from 'fontawesome-svelte';
 
   export let card;
-
-  console.log('card?', card);
 </script>
 
 <article class="card">

@@ -6,7 +6,7 @@
 
 <section>
   {#each techs as tech}
-    <span><FontAwesomeIcon icon={['fas', '"caret-right"']} size="lg" />{tech}</span>
+    <span><FontAwesomeIcon icon={['fas', 'caret-right']} size="lg" />{tech}</span>
   {/each}
 </section>
 
