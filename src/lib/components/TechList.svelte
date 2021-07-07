@@ -1,13 +1,12 @@
 <script lang="ts">
-  import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
-  import Icon from 'svelte-awesome';
+  import { FontAwesomeIcon } from 'fontawesome-svelte';
 
   export let techs: string[] = [];
 </script>
 
 <section>
   {#each techs as tech}
-    <span><Icon data={faCaretRight} />{tech}</span>
+    <span><FontAwesomeIcon icon={['fas', '"caret-right"']} size="lg" />{tech}</span>
   {/each}
 </section>
 

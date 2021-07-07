@@ -1,8 +1,13 @@
 <script lang="ts">
+  import { FontAwesomeIcon } from 'fontawesome-svelte';
+
   export let card;
+
+  console.log('card?', card);
 </script>
 
 <article class="card">
+  <FontAwesomeIcon icon={[card.prefix, card.icon]} size="lg" />
   <h2 class="label">{card.label}</h2>
   <div class="separator" />
   <div class="content">{card.description}</div>
