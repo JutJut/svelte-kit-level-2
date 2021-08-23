@@ -5,11 +5,14 @@
   import { fab } from '@fortawesome/free-brands-svg-icons';
   import { fas } from '@fortawesome/free-solid-svg-icons';
   import '../app.sass';
+  import { indexMenuLinks } from '../config/menu-links';
+
+  let menuLinks = indexMenuLinks;
 
   library.add(fab, fas);
 </script>
 
-<Header />
+<Header {menuLinks} />
 
 <main>
   <slot />
