@@ -1,6 +1,7 @@
 <script lang="ts">
   import Footer from '$lib/layout/Footer.svelte';
   import Header from '$lib/layout/Header.svelte';
+  import NavigationBar from '$lib/layout/NavigationBar.svelte';
   import { library } from '@fortawesome/fontawesome-svg-core';
   import { fab } from '@fortawesome/free-brands-svg-icons';
   import { fas } from '@fortawesome/free-solid-svg-icons';
@@ -19,6 +20,7 @@
 </main>
 
 <Footer />
+<NavigationBar {menuLinks} />
 
 <style>
   main {
