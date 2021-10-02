@@ -2,6 +2,7 @@
   import Heading1 from '$lib/components/Heading1.svelte';
   import PostCard from '$lib/components/PostCard.svelte';
   import Section from '$lib/components/Section.svelte';
+  import TextLink from '$lib/components/TextLink.svelte';
 
   export let posts;
 </script>
@@ -13,7 +14,7 @@
       <PostCard {post} />
     {/each}
   </article>
-  <div class="link-container"><a href="/blog">View All Posts</a></div>
+  <div class="link-container"><TextLink link="/blog" label="View All Posts" /></div>
 </Section>
 
 <style lang="sass">

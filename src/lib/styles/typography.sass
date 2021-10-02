@@ -64,3 +64,14 @@ ol
 
   li
     margin-bottom: 0.6em
+
+a:not(.button)
+  text-decoration: none
+  color: var(--primary-color)
+
+  &.active
+    color: var(--primary-color)
+    border-bottom: 2px solid currentColor
+
+  &:hover
+    color: var(--secondary-color)

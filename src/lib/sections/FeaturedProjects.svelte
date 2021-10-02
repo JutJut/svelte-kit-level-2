@@ -2,6 +2,7 @@
   import FeaturedProject from '$lib/components/FeaturedProject.svelte';
   import Heading1 from '$lib/components/Heading1.svelte';
   import Section from '$lib/components/Section.svelte';
+  import TextLink from '$lib/components/TextLink.svelte';
 
   export let projects;
 </script>
@@ -13,7 +14,7 @@
       <FeaturedProject {project} />
     {/each}
   </article>
-  <div class="link-container"><a href="/projects">View More Projects</a></div>
+  <div class="link-container"><TextLink link="/projects" label="View More Projects" /></div>
 </Section>
 
 <style lang="sass">
