@@ -33,7 +33,7 @@
   content={hero.content}
 />
 
-<About title={about.title} techs={about.techs} content={about.content} />
+<About title={about.title} techs={about.techs} imageUrl={about.image} content={about.content} />
 
 <CardGrid cards={cardGrid.cards} content={cardGrid.content} />
 

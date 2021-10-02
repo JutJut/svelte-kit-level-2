@@ -3,8 +3,7 @@ date: 2019-12-28
 title: 'Best movies of 2019'
 tags: ['Movies', 'Popcorn']
 published: true
-cover_image: ./images/popcorn.jpg
-canonical_url: false
+image: ./images/posts/popcorn.jpg
 description: 'Here is my personal list for the best movies of 2019. If you are planning your next movie night, then dont look further than this list. Grab your popcorn, choose one of the movies and thank me later.'
 ---
 

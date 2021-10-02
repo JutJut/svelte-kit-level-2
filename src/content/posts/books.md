@@ -3,8 +3,7 @@ date: 2020-02-12
 title: '7 Scary Things Web Devs write In Their Journals'
 tags: ['Webdevelopment', 'Writing', 'Stuff']
 published: true
-cover_image: ./images/book.jpg
-canonical_url: false
+image: ./images/posts/book.jpg
 description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.'
 ---
 

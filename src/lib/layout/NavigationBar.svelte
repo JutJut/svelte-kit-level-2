@@ -6,7 +6,7 @@
 </script>
 
 <nav>
-  {#each menuLinks as { link, name, prefix, icon }}
+  {#each menuLinks as { link, name, prefix="fas", icon }}
     <a class:active={$page.path === `/${link}`} href={link} aria-label={`social link to ${link}`}
       ><FontAwesomeIcon icon={[prefix, icon]} size="lg" />{name}</a
     >

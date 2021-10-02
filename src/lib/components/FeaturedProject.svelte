@@ -1,13 +1,30 @@
 <script lang="ts">
   import Heading2 from '$lib/components/Heading2.svelte';
   import TechList from '$lib/components/TechList.svelte';
+  import Lazy from 'svelte-lazy';
 
   export let project;
 
-  const { title, techs, demo_link: demoLink, repo_link: repoLink, content } = project;
+  const { title, techs, demoLink, repoLink, image, content } = project;
+
+  $: demoLinkLabel = `featured project ${title} demo`;
+  $: repoLinkLabel = `featured project ${title} repo`;
 </script>
 
 <article class="project">
+  {#if image}
+    <a
+      aria-label={demoLink ? demoLinkLabel : repoLink ? repoLinkLabel : `featured project ${title}`}
+      href={demoLink ? demoLink : repoLink ? repoLink : '#'}
+      alt={title}
+      target="_blank"
+      rel="noopener"
+    >
+      <Lazy height={200}>
+        <img width="100%" alt={title} src={image} />
+      </Lazy>
+    </a>
+  {/if}
   <section class="info">
     <a
       class="title-link"

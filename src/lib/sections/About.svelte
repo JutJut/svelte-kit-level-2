@@ -3,15 +3,20 @@
   import Heading2 from '$lib/components/Heading2.svelte';
   import Section from '$lib/components/Section.svelte';
   import TechList from '$lib/components/TechList.svelte';
+  import Lazy from 'svelte-lazy';
 
   export let title;
   export let techs;
   export let content;
+  export let imageUrl;
 </script>
 
 <Section id="about">
   <Heading1>About Me</Heading1>
   <article>
+    <Lazy height={200}>
+      <img width="100%" alt="me" src={imageUrl} />
+    </Lazy>
     <div>
       <Heading2>{title}</Heading2>
       <div class="content">{@html content}</div>

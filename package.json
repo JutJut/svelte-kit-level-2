@@ -42,6 +42,7 @@
     "sass": "^1.34.1",
     "svelte": "^3.34.0",
     "svelte-check": "^2.0.0",
+    "svelte-lazy": "^1.0.10",
     "svelte-preprocess": "^4.0.0",
     "to-vfile": "^6.1.0",
     "tslib": "^2.0.0",
