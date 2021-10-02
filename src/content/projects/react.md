@@ -2,8 +2,8 @@
 featured: false
 date: '2010-03-19'
 title: 'React'
-repo_link: 'https://github.com/facebook/react/'
-demo_link: 'https://reactjs.org/'
+repoLink: 'https://github.com/facebook/react/'
+demoLink: 'https://reactjs.org/'
 techs: ['Typescript', 'React', 'Redux']
 ---
 

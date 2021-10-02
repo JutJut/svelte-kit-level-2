@@ -1,5 +1,6 @@
 <script lang="ts">
   import Heading2 from '$lib/components/Heading2.svelte';
+  import Lazy from 'svelte-lazy';
   import TagList from './TagList.svelte';
 
   export let post;
@@ -7,6 +8,8 @@
   $: month = new Date(post.metadata.date).toLocaleDateString('en-EN', { month: 'short' });
   $: day = new Date(post.metadata.date).toLocaleDateString('en-EN', { day: '2-digit' });
   $: link = `/blog/${post.slug}`;
+
+  $: image = post.metadata.image;
 </script>
 
 <article class="post">
@@ -14,6 +17,19 @@
     <span>{month}</span>
     <span>{day}</span>
   </div>
+  {#if image}
+    <a
+      aria-label={`recent posts ${post.metadata.title}`}
+      href={link}
+      alt={post.metadata.title}
+      target="_blank"
+      rel="noopener"
+    >
+      <Lazy height={200}>
+        <img width="100%" alt={post.metadata.title} src={image} />
+      </Lazy>
+    </a>
+  {/if}
   <TagList tags={post.metadata.tags} />
   <a class="title-link" sveltekit:prefetch href={link}><Heading2>{post.metadata.title}</Heading2></a
   >

@@ -4,8 +4,7 @@ date: 2020-03-31
 published: true
 tags: ['Breakfast', 'Lifehack', 'Markdown']
 series: false
-cover_image: ./images/breakfast.jpg
-canonical_url: false
+image: ./images/posts/breakfast.jpg
 description: "Markdown is intended to be as easy-to-read and easy-to-write as is feasible. Readability, however, is emphasized above all else. A Markdown-formatted document should be publishable as-is, as plain text, without looking like it's been marked up with tags or formatting instructions."
 ---
 

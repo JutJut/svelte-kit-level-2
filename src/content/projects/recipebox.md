@@ -2,9 +2,9 @@
 featured: true
 date: '2019-12-26'
 title: 'Recipebox'
-cover_image: './images/notebook.jpg'
-repo_link: 'https://github.com/Knochenmark/recipebox'
-demo_link: 'https://knochenmark.github.io/recipebox/'
+image: './images/projects/notebook.jpg'
+repoLink: 'https://github.com/Knochenmark/recipebox'
+demoLink: 'https://knochenmark.github.io/recipebox/'
 techs: ['Typescript', 'React', 'Redux', 'Typestyle']
 ---
 

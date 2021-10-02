@@ -26,7 +26,8 @@
     text-transform: lowercase
     margin: 0 1rem 0.5rem 0
 
-    > a
-      color: var(--primary-color)
-      text-decoration: none
+    // TODO: Add link to each tag
+    // > a
+    //   color: var(--primary-color)
+    //   text-decoration: none
 </style>

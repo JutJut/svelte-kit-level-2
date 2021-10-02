@@ -3,8 +3,7 @@ date: 2020-05-31
 title: 'In 80 Steaks around the world'
 tags: ['Food', 'Meat', 'Steak', 'Dish']
 published: true
-cover_image: ./images/steak.jpg
-canonical_url: false
+image: ./images/posts/steak.jpg
 description: 'The glorius journey to find the 80 best steaks around the world. Find out more about our travel, the steaks we feast and other useful tips for grill enthusiasts'
 ---
 

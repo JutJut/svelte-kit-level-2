@@ -56,9 +56,6 @@
 <style lang="sass">
   @import '../styles/mixins'
 
-  Heading1
-    margin-bottom: 70px
-
   .description
     white-space: pre-line
     width: 100%

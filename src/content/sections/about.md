@@ -1,6 +1,6 @@
 ---
 title: 'The Gatsby starter that makes developer dreams come true!'
-about_image: './me.jpg'
+image: './images/me.jpg'
 techs: ['Gatsby', 'Javascript', 'React', 'GraphQL', 'Emotion', 'Stylus']
 ---
 
