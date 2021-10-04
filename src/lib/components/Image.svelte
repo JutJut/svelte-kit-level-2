@@ -11,5 +11,5 @@
 <style lang="sass">
   @import '../styles/mixins.sass'
   .animated
-    @include image-hover-animation
+    @include hover-scale
 </style>
