@@ -7,15 +7,20 @@
   import { fas } from '@fortawesome/free-solid-svg-icons';
   import '../app.sass';
   import { indexMenuLinks } from '../config/menu-links';
+  import ScrollToTopButton from '$lib/components/ScrollToTopButton.svelte';
 
   let menuLinks = indexMenuLinks;
+  let scrollYValue;
 
   library.add(fab, fas);
 </script>
 
 <Header {menuLinks} />
 
-<main>
+<svelte:window bind:scrollY={scrollYValue} />
+
+<main>  
+  <ScrollToTopButton scrollYValue={scrollYValue} />
   <slot />
 </main>
 
