@@ -15,6 +15,7 @@
       props: { data },
     };
   }
+
 </script>
 
 <script lang="ts">
