@@ -2,6 +2,7 @@
   import Heading2 from '$lib/components/Heading2.svelte';
   import Lazy from 'svelte-lazy';
   import TagList from './TagList.svelte';
+  import Image from './Image.svelte';
 
   export let post;
 
@@ -26,7 +27,7 @@
       rel="noopener"
     >
       <Lazy height={200}>
-        <img width="100%" alt={post.metadata.title} src={image} />
+        <Image src={image} alt={post.metadata.title} width="100%" animated={true}/>
       </Lazy>
     </a>
   {/if}

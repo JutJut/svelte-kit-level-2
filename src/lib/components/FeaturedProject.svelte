@@ -2,6 +2,7 @@
   import Heading2 from '$lib/components/Heading2.svelte';
   import TechList from '$lib/components/TechList.svelte';
   import Lazy from 'svelte-lazy';
+  import Image from './Image.svelte';
 
   export let project;
 
@@ -21,7 +22,7 @@
       rel="noopener"
     >
       <Lazy height={200}>
-        <img width="100%" alt={title} src={image} />
+        <Image src={image} alt={title} width="100%" animated={true}/>
       </Lazy>
     </a>
   {/if}
