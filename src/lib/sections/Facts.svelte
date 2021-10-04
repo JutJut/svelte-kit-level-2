@@ -27,8 +27,11 @@
   .facts
     width: 100%
     display: flex
-    justify-content: space-between
+    justify-content: center
     flex-wrap: wrap
+
+    @include mq-gt-xs
+      justify-content: space-between
 
   .fact-container
     display: flex
