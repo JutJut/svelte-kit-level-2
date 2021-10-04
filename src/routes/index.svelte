@@ -3,6 +3,7 @@
   import About from '$lib/sections/About.svelte';
   import CardGrid from '$lib/sections/CardGrid.svelte';
   import Contact from '$lib/sections/Contact.svelte';
+  import Facts from '$lib/sections/Facts.svelte';
   import FeaturedProjects from '$lib/sections/FeaturedProjects.svelte';
   import Hero from '$lib/sections/Hero.svelte';
   import RecentPosts from '$lib/sections/RecentPosts.svelte';
@@ -15,7 +16,6 @@
       props: { data },
     };
   }
-
 </script>
 
 <script lang="ts">
@@ -33,6 +33,8 @@
   tagline={hero.tagline}
   content={hero.content}
 />
+
+<Facts />
 
 <About title={about.title} techs={about.techs} imageUrl={about.image} content={about.content} />
 
