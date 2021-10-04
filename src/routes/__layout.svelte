@@ -1,4 +1,5 @@
 <script lang="ts">
+  import ScrollToTopButton from '$lib/components/ScrollToTopButton.svelte';
   import Footer from '$lib/layout/Footer.svelte';
   import Header from '$lib/layout/Header.svelte';
   import NavigationBar from '$lib/layout/NavigationBar.svelte';
@@ -7,7 +8,6 @@
   import { fas } from '@fortawesome/free-solid-svg-icons';
   import '../app.sass';
   import { indexMenuLinks } from '../config/menu-links';
-  import ScrollToTopButton from '$lib/components/ScrollToTopButton.svelte';
 
   let menuLinks = indexMenuLinks;
   let scrollYValue;
@@ -19,8 +19,8 @@
 
 <svelte:window bind:scrollY={scrollYValue} />
 
-<main>  
-  <ScrollToTopButton scrollYValue={scrollYValue} />
+<main>
+  <ScrollToTopButton {scrollYValue} />
   <slot />
 </main>
 
@@ -32,10 +32,6 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
     width: 100%;
-    max-width: 1024px;
-    margin: 0 auto;
-    box-sizing: border-box;
   }
 </style>
