@@ -6,8 +6,8 @@
 
 
   <form class="form" autocomplete="off">
-    <InputText name="email" placeholder="E-mail"/>
-    <InputTextarea name="message" placeholder="Message . . ."/>
+    <InputText name="email" placeholder="E-mail" label="E-mail"/>
+    <InputTextarea name="message" placeholder="Message . . ." label="Message"/>
     <FormButton value="Send" />
   </form>
 
