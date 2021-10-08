@@ -1,5 +1,6 @@
 <script lang="ts">
   import Heading1 from '$lib/components/Heading1.svelte';
+  import Heading5 from '$lib/components/Heading5.svelte';
   import Section from '$lib/components/Section.svelte';
   import { FontAwesomeIcon } from 'fontawesome-svelte';
   import ContactForm from '$lib/components/ContactForm.svelte';
@@ -12,12 +13,13 @@
 
 <Section id="contact">  
   <section class="description">
-    <section class="contact-details">
-      <Heading1>Contact Details</Heading1>
-      {@html content}
-    </section>
-    <section class="contact-form">
+    <Heading1>Send me a message</Heading1>
+    <section>
       <ContactForm />
+    </section>
+    <Heading5>Contact Details</Heading5>
+    <section>
+      {@html content}
     </section>
   </section>
   <div class="separator" />
@@ -64,28 +66,10 @@
 <style lang="sass">
   @import '../styles/mixins'
 
-  .contact-details
-    grid-area: details
-    // text-align: center
-  
-  .contact-form
-    grid-area: form
-
   .description
     white-space: pre-line
     width: 100%
     margin-left: 3px
-    display: grid
-    grid-template-columns: 1fr 1fr
-    grid-template-areas: "details form"
-    @include mq-lt-md
-      grid-template-columns: 1fr
-      grid-template-areas: "details" "form"
-    // grid-template-columns: repeat(2, 50%)
-    // grid-row: 1
-    // @include mq-lt-md
-    //   grid-template-columns: repeat(2, 100%)
-    //   // grid-row: 2
 
   .separator
     height: 1px
