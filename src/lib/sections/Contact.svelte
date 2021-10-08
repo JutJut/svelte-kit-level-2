@@ -1,7 +1,9 @@
 <script lang="ts">
   import Heading1 from '$lib/components/Heading1.svelte';
+  import Heading5 from '$lib/components/Heading5.svelte';
   import Section from '$lib/components/Section.svelte';
   import { FontAwesomeIcon } from 'fontawesome-svelte';
+  import ContactForm from '$lib/components/ContactForm.svelte';
 
   export let phone;
   export let email;
@@ -9,9 +11,17 @@
   export let content;
 </script>
 
-<Section id="contact">
-  <Heading1>Contact Details</Heading1>
-  <section class="description">{@html content}</section>
+<Section id="contact">  
+  <section class="description">
+    <Heading1>Send me a message</Heading1>
+    <section>
+      <ContactForm />
+    </section>
+    <Heading5>Contact Details</Heading5>
+    <section>
+      {@html content}
+    </section>
+  </section>
   <div class="separator" />
   <div class="contacts">
     <div class="contact">
@@ -59,7 +69,6 @@
   .description
     white-space: pre-line
     width: 100%
-    max-width: 500px
     margin-left: 3px
 
   .separator
