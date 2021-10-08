@@ -1,23 +1,21 @@
 <script>
   export let name;
-  export let placeholder='';
+  export let placeholder = '';
 </script>
 
-<input type="text" name={name} placeholder="{placeholder}"/>
+<input type="text" {name} {placeholder} />
 
 <style lang="sass">
   input
     height: 50px
     width: 100%
-    padding-left: 10px
+    padding: 0 1rem
     font-size: var(--base-font-size)
-    color: var(--primary-color)
     background-color: transparent
+    color: var(--title-color)
     border: 1px solid var(--title-color)
-    transition: var(--transition-fast)
-    &:focus
-      color: var(--primary-color)
+    border-radius: var(--radius)
+
     &::placeholder
       color: var(--disabled-color)
-      padding-left: 10px
 </style>
