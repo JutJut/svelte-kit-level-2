@@ -6,10 +6,10 @@
   import { library } from '@fortawesome/fontawesome-svg-core';
   import { fab } from '@fortawesome/free-brands-svg-icons';
   import { fas } from '@fortawesome/free-solid-svg-icons';
-  import '../app.sass';
-  import { indexMenuLinks } from '../config/menu-links';
+  import '../../app.sass';
+  import { blogMenuLinks } from '../../config/menu-links';
 
-  let menuLinks = indexMenuLinks;
+  let menuLinks = blogMenuLinks;
   let scrollYValue;
 
   library.add(fab, fas);

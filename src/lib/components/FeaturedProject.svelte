@@ -18,11 +18,9 @@
       aria-label={demoLink ? demoLinkLabel : repoLink ? repoLinkLabel : `featured project ${title}`}
       href={demoLink ? demoLink : repoLink ? repoLink : '#'}
       alt={title}
-      target="_blank"
-      rel="noopener"
     >
       <Lazy height={200}>
-        <Image src={image} alt={title} width="100%" animated={true}/>
+        <Image src={image} alt={title} width="100%" animated={true} />
       </Lazy>
     </a>
   {/if}
