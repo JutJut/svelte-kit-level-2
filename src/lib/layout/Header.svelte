@@ -14,7 +14,7 @@
     <nav>
       {#each menuLinks as { link, name }}
         <a
-          class:active={$page.path === `/${link}`}
+          class:active={$page.url.pathname === `/${link}`}
           href={link}
           aria-label={`social link to ${link}`}>{name}</a
         >

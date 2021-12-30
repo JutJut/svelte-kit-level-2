@@ -1,11 +1,10 @@
 <script context="module" lang="ts">
   import { base } from '$app/paths';
-  export async function load({ page, fetch }) {
-    const slug = page.params.slug;
-    const post = await fetch(`${base}/blog/${slug}.json`)
-        .then((r) => r.json());
+  export async function load({ params, fetch }) {
+    const slug = params.slug;
+    const post = await fetch(`${base}/blog/${slug}.json`).then((r) => r.json());
     return {
-      props: { post }
+      props: { post },
     };
   }
 </script>

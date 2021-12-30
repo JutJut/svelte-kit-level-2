@@ -1,8 +1,8 @@
 <script lang="ts">
   import Heading2 from '$lib/components/Heading2.svelte';
   import Lazy from 'svelte-lazy';
-  import TagList from './TagList.svelte';
   import Image from './Image.svelte';
+  import TagList from './TagList.svelte';
 
   export let post;
 
@@ -23,11 +23,9 @@
       aria-label={`recent posts ${post.metadata.title}`}
       href={link}
       alt={post.metadata.title}
-      target="_blank"
-      rel="noopener"
     >
       <Lazy height={200}>
-        <Image src={image} alt={post.metadata.title} width="100%" animated={true}/>
+        <Image src={image} alt={post.metadata.title} width="100%" animated={true} />
       </Lazy>
     </a>
   {/if}
