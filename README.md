@@ -162,8 +162,8 @@ The frontmatter information for each blog post is structured as following:
 | Field       | Type     | Description             | Example                             |
 | ----------- | -------- | ----------------------- | ----------------------------------- |
 | date        | Date     | Publishing Date         | 2020-05-31                          |
-| title       | String   | Project Title           | 'Gatsby Portfolio'                  |
-| techs       | String[] | List of Tags            | ['React', 'Gatsby']                 |
+| title       | String   | Project Title           | 'SvelteKit Portfolio'               |
+| techs       | String[] | List of Tags            | ['Svelte', 'SvelteKit', 'TS']       |
 | featured    | Boolean  | Is Featured Flag        | true                                |
 | cover_image | String?  | Path of the Cover Image | ./images/my-image.jpg               |
 | repo_link   | String?  | URL to the repository   | 'https://github.com/facebook/react' |
@@ -184,7 +184,7 @@ Each Markdown file contains frontmatter variables that can be edited.
 
 ### Example by the Cards Section
 
-The Card Section in our example portfolio is used to display features of the gatsby starter, but it can also be used to
+The Card Section in our example portfolio is used to display features of the SvelteKit starter, but it can also be used to
 display any other arbitrary group of informations. Examples could be a card-grid of your most used technologies in your stack, your contributers or maybe a list of your customers. Go ahead and adjust the component to your own needs.
 
 To edit the Cards Section you would only have to edit the markdown file. The frontmatter of the Cards component consists of a collection of card objects that looks as following:
