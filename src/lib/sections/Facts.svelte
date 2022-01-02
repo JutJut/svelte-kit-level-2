@@ -1,24 +1,24 @@
 <script lang="ts">
   import Heading1 from '$lib/components/Heading1.svelte';
   import SkewedSection from '$lib/components/SkewedSection.svelte';
+
+  export let title: string = '';
+  export let angle: number = -8;
+  export let facts;
 </script>
 
-<SkewedSection angle={-8}>
-  <Heading1>Some Interesting Facts</Heading1>
-  <section class="facts">
-    <section class="fact-container">
-      <span class="number">127</span>
-      <span class="fact">Finished Projects</span>
+<SkewedSection {angle}>
+  <Heading1>{title}</Heading1>
+  {#if facts}
+    <section class="facts">
+      {#each facts as { fact, count }}
+        <section class="fact-container">
+          <span class="count">{count}</span>
+          <span class="fact">{fact}</span>
+        </section>
+      {/each}
     </section>
-    <section class="fact-container">
-      <span class="number">321</span>
-      <span class="fact">Happy Customers</span>
-    </section>
-    <section class="fact-container">
-      <span class="number">863</span>
-      <span class="fact">Freelancing Hours</span>
-    </section>
-  </section>
+  {/if}
 </SkewedSection>
 
 <style lang="sass">
@@ -38,7 +38,7 @@
     flex-direction: column
     padding: 1rem
 
-    & > .number
+    & > .count
       margin-left: 2rem
       margin-bottom: 1rem
       font-size: 2rem
