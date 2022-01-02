@@ -7,6 +7,11 @@ function getHero() {
   return { ...metadata, content };
 }
 
+function getFacts() {
+  const { metadata, content } = process('src/content/sections/facts.md');
+  return { ...metadata, content };
+}
+
 function getAbout() {
   const { metadata, content } = process('src/content/sections/about.md');
   return { ...metadata, content };
@@ -35,6 +40,7 @@ export function get() {
   return {
     body: {
       hero: getHero(),
+      facts: getFacts(),
       about: getAbout(),
       cardGrid: getCards(),
       projects: getFeaturedProjects(),

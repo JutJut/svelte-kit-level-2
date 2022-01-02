@@ -20,7 +20,7 @@
 
 <script lang="ts">
   export let data;
-  const { hero, about, cardGrid, contact, projects, recentPosts: posts } = data;
+  const { hero, facts, about, cardGrid, contact, projects, recentPosts: posts } = data;
 </script>
 
 <svelte:head>
@@ -34,7 +34,7 @@
   content={hero.content}
 />
 
-<Facts />
+<Facts title={facts.title} angle={facts.angle} facts={facts.facts} />
 
 <About title={about.title} techs={about.techs} imageUrl={about.image} content={about.content} />
 
