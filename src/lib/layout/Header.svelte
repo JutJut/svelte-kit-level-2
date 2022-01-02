@@ -8,7 +8,7 @@
 
 <header>
   <div class="container">
-    <a class="home-link" href="/">
+    <a title="logo" class="home-link" href="/">
       <Logo />
     </a>
     <nav>
