@@ -4,7 +4,7 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/JutJut/svelte-kit-level-2.svg)
 
 <p align="center">
-  <img alt="Level 2" src="./lvl-2-logo.svg" width="140" />
+  <img alt="Level 2" src="./static/lvl-2-logo.svg" width="140" />
 </p>
 <h1 align="center">
   SvelteKit Starter Portfolio: Level 2
