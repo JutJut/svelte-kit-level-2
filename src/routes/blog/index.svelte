@@ -27,7 +27,7 @@
 
 <Section full={true}>
   <Heading1>SvelteKit Blog</Heading1>
-  <p class="info">{posts.length} posts.</p>
+  <p>{posts.length} posts found.</p>
   {#each paginatedPosts as post}
     <a href={`${base}/blog/${post.slug}`}>
       <h2 class="title">{post.metadata.title}</h2>

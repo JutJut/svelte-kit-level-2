@@ -40,7 +40,7 @@ export const blogMenuLinks: MenuLink[] = [
   },
   {
     name: 'Tags',
-    link: '/blog', // FIXME: Link to tag once page exists
+    link: '/tags',
     icon: 'tags',
   },
 ];
