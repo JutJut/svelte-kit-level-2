@@ -17,7 +17,6 @@
     <a
       aria-label={demoLink ? demoLinkLabel : repoLink ? repoLinkLabel : `featured project ${title}`}
       href={demoLink ? demoLink : repoLink ? repoLink : '#'}
-      alt={title}
     >
       <Lazy height={200}>
         <Image src={image} alt={title} width="100%" animated={true} />

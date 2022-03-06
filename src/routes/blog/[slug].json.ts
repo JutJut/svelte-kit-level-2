@@ -1,10 +1,5 @@
-import { process } from '$lib/utils/markdown';
+import { getPost } from '$lib/api/get-post';
 
 export function get({ params }) {
-  const { slug } = params;
-
-  const { metadata, content } = process(`src/content/posts/${slug}.md`);
-  const body = JSON.stringify({ metadata, content });
-
-  return { body };
+  return { body: getPost(params.slug) };
 }

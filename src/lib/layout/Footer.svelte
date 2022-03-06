@@ -2,7 +2,6 @@
   import Links from '$lib/components/Links.svelte';
   import Rotator from '$lib/components/Rotator.svelte';
 
-
   let author = 'Max Mustermann'; // TODO: Source author name from config
 </script>
 

@@ -4,9 +4,7 @@
 
 <section class="container">
   {#each tags as tag}
-    <!-- TODO: Use link once Tags page exist -->
-    <!-- <span class="tag"><a href="/tags/${tag}">#{tag}</a></span> -->
-    <span class="tag">#{tag}</span>
+    <span class="tag"><a href="/tags/{tag}">#{tag}</a></span>
   {/each}
 </section>
 

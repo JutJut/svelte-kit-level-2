@@ -10,7 +10,7 @@
 
   section
     display: flex
-    justify-content: center
+    justify-content: start
     align-items: flex-start
     flex-direction: column
     margin: 0 auto
@@ -22,6 +22,7 @@
     &.full
       position: relative
       min-height: calc(100vh - 2 * var(--header-height))
+      justify-content: center
 
       @include mq-gt-sm
         min-height: calc(100vh - var(--header-height))

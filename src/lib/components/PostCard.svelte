@@ -19,11 +19,7 @@
     <span>{day}</span>
   </div>
   {#if image}
-    <a
-      aria-label={`recent posts ${post.metadata.title}`}
-      href={link}
-      alt={post.metadata.title}
-    >
+    <a aria-label={`recent posts ${post.metadata.title}`} href={link}>
       <Lazy height={200}>
         <Image src={image} alt={post.metadata.title} width="100%" animated={true} />
       </Lazy>
