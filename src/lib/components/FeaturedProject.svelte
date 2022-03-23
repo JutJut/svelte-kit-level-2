@@ -1,6 +1,7 @@
 <script lang="ts">
   import Heading2 from '$lib/components/Heading2.svelte';
   import TechList from '$lib/components/TechList.svelte';
+  import { FontAwesomeIcon } from 'fontawesome-svelte';
   import Lazy from 'svelte-lazy';
   import Image from './Image.svelte';
 
@@ -32,6 +33,30 @@
     >
     <div class="description">{@html content}</div>
     <TechList {techs} />
+    <div class="link-container">
+      {#if repoLink}
+        <a
+          href={repoLink}
+          target="_blank"
+          rel="noopener"
+          title="Repository Link"
+          aria-label={repoLinkLabel}
+        >
+          <FontAwesomeIcon icon={['fab', 'github']} size="lg" />
+        </a>
+      {/if}
+      {#if demoLink}
+        <a
+          href={demoLink}
+          target="_blank"
+          rel="noopener"
+          title="Demo Link"
+          aria-label={demoLinkLabel}
+        >
+          <FontAwesomeIcon icon={['fas', 'external-link-alt']} size="lg" />
+        </a>
+      {/if}
+    </div>
   </section>
 </article>
 
@@ -83,4 +108,21 @@
       -webkit-box-orient: vertical
       -webkit-line-clamp: 3
       overflow: hidden
+
+  .link-container
+    display: flex
+    gap: 0.8rem
+    justify-content: flex-end
+    margin-top: 0.5rem
+
+    > a
+      display: flex
+      justify-content: center
+      align-items: center
+
+      > :global(svg)
+        color: var(--title-color)
+
+      &:hover > :global(svg)
+        color: var(--primary-color)
 </style>
