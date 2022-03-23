@@ -10,14 +10,14 @@
 <SkewedSection {angle}>
   <Heading1>{title}</Heading1>
   {#if facts}
-    <section class="facts">
+    <div class="facts">
       {#each facts as { fact, count }}
-        <section class="fact-container">
+        <div class="fact-container">
           <span class="count">{count}</span>
           <span class="fact">{fact}</span>
-        </section>
+        </div>
       {/each}
-    </section>
+    </div>
   {/if}
 </SkewedSection>
 

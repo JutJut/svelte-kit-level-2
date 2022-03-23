@@ -2,9 +2,7 @@
   export let text: string = '';
 </script>
 
-<section>
-  <button>{text}</button>
-</section>
+<button>{text}</button>
 
 <style lang="sass">
   button

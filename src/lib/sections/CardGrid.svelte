@@ -10,11 +10,11 @@
 <Section id="features">
   <Heading1>Our Features</Heading1>
   <div class="content">{@html content}</div>
-  <section class="grid-container">
+  <div class="grid-container">
     {#each cards as card}
       <Card {card} />
     {/each}
-  </section>
+  </div>
 </Section>
 
 <style lang="sass">

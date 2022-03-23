@@ -4,14 +4,14 @@
   export let techs: string[] = [];
 </script>
 
-<section>
+<div class="container">
   {#each techs as tech}
     <span><FontAwesomeIcon icon={['fas', 'caret-right']} size="lg" />{tech}</span>
   {/each}
-</section>
+</div>
 
 <style lang="sass">
-  section
+  .container
     display: flex
     flex-wrap: wrap
     margin-top: 0.8rem

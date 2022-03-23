@@ -28,7 +28,7 @@
   <TagList tags={post.metadata.tags} />
   <a class="title-link" sveltekit:prefetch href={link}><Heading2>{post.metadata.title}</Heading2></a
   >
-  <section class="description"><p>{post.metadata.description}</p></section>
+  <div class="description"><p>{post.metadata.description}</p></div>
 </article>
 
 <style lang="sass">

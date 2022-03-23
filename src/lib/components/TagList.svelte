@@ -2,11 +2,11 @@
   export let tags: string[] = [];
 </script>
 
-<section class="container">
+<div class="container">
   {#each tags as tag}
     <span class="tag"><a href="/tags/{tag}">#{tag}</a></span>
   {/each}
-</section>
+</div>
 
 <style lang="sass">
   .container

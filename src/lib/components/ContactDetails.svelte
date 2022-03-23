@@ -14,10 +14,10 @@
       fixedWidth={true}
       style="margin-right: 0.8rem"
     />
-    <section>
+    <address>
       <div class="detail__description">Office Location</div>
       <span class="detail__form">{address}</span>
-    </section>
+    </address>
   </div>
   <div class="detail">
     <FontAwesomeIcon
@@ -26,10 +26,10 @@
       fixedWidth={true}
       style="margin-right: 0.8rem"
     />
-    <section>
+    <address>
       <div class="detail__description">My E-Mail</div>
       <span class="detail__form">{email}</span>
-    </section>
+    </address>
   </div>
   <div class="detail">
     <FontAwesomeIcon
@@ -38,10 +38,10 @@
       fixedWidth={true}
       style="margin-right: 0.8rem"
     />
-    <section>
+    <address>
       <div class="detail__description">Phone Number</div>
       <span class="detail__form">{phone}</span>
-    </section>
+    </address>
   </div>
 </div>
 

@@ -12,7 +12,7 @@
 
 <Section id="contact">
   <Heading1>Contact Details</Heading1>
-  <section class="description">{@html content}</section>
+  <div class="description">{@html content}</div>
   <div class="separator" />
   <ContactDetails {phone} {email} {address} />
   <ContactForm />

@@ -30,7 +30,7 @@
       target="_blank"
       rel="noopener"><Heading2>{title}</Heading2></a
     >
-    <section class="description">{@html content}</section>
+    <div class="description">{@html content}</div>
     <TechList {techs} />
   </section>
 </article>
