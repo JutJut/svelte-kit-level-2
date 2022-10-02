@@ -36,16 +36,15 @@ function getContact() {
   return { ...metadata, content };
 }
 
-export function get() {
+/** @type {import('./$types').PageLoad} */
+export function load({ params }) {
   return {
-    body: {
-      hero: getHero(),
-      facts: getFacts(),
-      about: getAbout(),
-      cardGrid: getCards(),
-      projects: getFeaturedProjects(),
-      recentPosts: getRecentPosts(),
-      contact: getContact(),
-    },
+    hero: getHero(),
+    facts: getFacts(),
+    about: getAbout(),
+    cardGrid: getCards(),
+    projects: getFeaturedProjects(),
+    recentPosts: getRecentPosts(),
+    contact: getContact(),
   };
 }
