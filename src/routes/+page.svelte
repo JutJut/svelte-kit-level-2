@@ -4,13 +4,13 @@
   import Contact from '$lib/sections/Contact.svelte';
   // import Facts from '$lib/sections/Facts.svelte';
   // import FeaturedProjects from '$lib/sections/FeaturedProjects.svelte';
-  // import Hero from '$lib/sections/Hero.svelte';
+  import Hero from '$lib/sections/Hero.svelte';
   // import RecentPosts from '$lib/sections/RecentPosts.svelte';
 
   /** @type {import('./$types').PageData} */
   export let data;
 
-  const { contact = {} } = data;
+  const { contact = {}, hero = {} } = data;
   // const { hero, facts, about, cardGrid, contact, projects, recentPosts: posts } = data;
 </script>
 
@@ -18,15 +18,14 @@
   <title>Home</title>
 </svelte:head>
 
-Index Page
-
-<!--
 <Hero
   introduction={hero.introduction}
   author={hero.author}
   tagline={hero.tagline}
   content={hero.content}
 />
+
+<!--
 
 <Facts title={facts.title} angle={facts.angle} facts={facts.facts} />
 

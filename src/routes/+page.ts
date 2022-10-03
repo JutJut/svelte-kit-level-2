@@ -1,9 +1,8 @@
 import { getSectionsContent } from '../lib/utils/markdown';
 
-// function getHero() {
-//   const { metadata, content } = process('src/content/sections/hero.md');
-//   return { ...metadata, content };
-// }
+async function getHero() {
+  return await getSectionsContent('hero');
+}
 
 // function getFacts() {
 //   const { metadata, content } = process('src/content/sections/facts.md');
@@ -37,7 +36,7 @@ async function getContact() {
 /** @type {import('./$types').PageLoad} */
 export async function load({ params }) {
   return {
-    // hero: getHero(),
+    hero: await getHero(),
     // facts: getFacts(),
     // about: getAbout(),
     // cardGrid: getCards(),

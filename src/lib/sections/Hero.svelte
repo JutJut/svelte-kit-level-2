@@ -12,7 +12,9 @@
   <div class="introduction">{introduction}</div>
   <h1>{author}</h1>
   <h2>{tagline}</h2>
-  <div class="description">{@html content}</div>
+  <div class="description">
+    <svelte:component this={content} />
+  </div>
   <Mouse />
 </Section>
 
