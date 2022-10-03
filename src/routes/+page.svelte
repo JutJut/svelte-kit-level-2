@@ -1,7 +1,7 @@
 <script lang="ts">
   // import About from '$lib/sections/About.svelte';
   // import CardGrid from '$lib/sections/CardGrid.svelte';
-  // import Contact from '$lib/sections/Contact.svelte';
+  import Contact from '$lib/sections/Contact.svelte';
   // import Facts from '$lib/sections/Facts.svelte';
   // import FeaturedProjects from '$lib/sections/FeaturedProjects.svelte';
   // import Hero from '$lib/sections/Hero.svelte';
@@ -10,7 +10,7 @@
   /** @type {import('./$types').PageData} */
   export let data;
 
-  console.log("data", data)
+  const { contact = {} } = data;
   // const { hero, facts, about, cardGrid, contact, projects, recentPosts: posts } = data;
 </script>
 
@@ -36,11 +36,11 @@ Index Page
 
 <FeaturedProjects {projects} />
 
-<RecentPosts {posts} />
+<RecentPosts {posts} /> -->
 
 <Contact
   address={contact.address}
   phone={contact.phone}
   email={contact.email}
   content={contact.content}
-/> -->
+/>
