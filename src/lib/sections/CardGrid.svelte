@@ -9,7 +9,9 @@
 
 <Section id="features">
   <Heading1>Our Features</Heading1>
-  <div class="content">{@html content}</div>
+  <div class="content">
+    <svelte:component this={content} />
+  </div>
   <div class="grid-container">
     {#each cards as card}
       <Card {card} />

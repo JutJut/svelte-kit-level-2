@@ -1,14 +1,5 @@
 import { getSectionsContent } from '../lib/utils/markdown';
 
-async function getHero() {
-  return await getSectionsContent('hero');
-}
-
-// function getFacts() {
-//   const { metadata, content } = process('src/content/sections/facts.md');
-//   return { ...metadata, content };
-// }
-
 // function getAbout() {
 //   const { metadata, content } = process('src/content/sections/about.md');
 //   return { ...metadata, content };
@@ -28,20 +19,15 @@ async function getHero() {
 //   return JSON.parse(getPosts()).slice(0, recentPostCount);
 // }
 
-async function getContact() {
-  // const { metadata, content } = process('src/content/sections/contact.md');
-  return await getSectionsContent('contact');
-}
-
 /** @type {import('./$types').PageLoad} */
 export async function load({ params }) {
   return {
-    hero: await getHero(),
-    // facts: getFacts(),
+    hero: await getSectionsContent('hero'),
+    facts: await getSectionsContent('facts'),
     // about: getAbout(),
-    // cardGrid: getCards(),
+    cardGrid: await getSectionsContent('cards'),
     // projects: getFeaturedProjects(),
     // recentPosts: getRecentPosts(),
-    contact: await getContact(),
+    contact: await getSectionsContent('contact'),
   };
 }

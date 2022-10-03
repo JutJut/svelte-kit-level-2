@@ -1,8 +1,8 @@
 <script lang="ts">
   // import About from '$lib/sections/About.svelte';
-  // import CardGrid from '$lib/sections/CardGrid.svelte';
+  import CardGrid from '$lib/sections/CardGrid.svelte';
   import Contact from '$lib/sections/Contact.svelte';
-  // import Facts from '$lib/sections/Facts.svelte';
+  import Facts from '$lib/sections/Facts.svelte';
   // import FeaturedProjects from '$lib/sections/FeaturedProjects.svelte';
   import Hero from '$lib/sections/Hero.svelte';
   // import RecentPosts from '$lib/sections/RecentPosts.svelte';
@@ -10,7 +10,7 @@
   /** @type {import('./$types').PageData} */
   export let data;
 
-  const { contact = {}, hero = {} } = data;
+  const { contact = {}, hero = {}, facts = {}, cardGrid = {} } = data;
   // const { hero, facts, about, cardGrid, contact, projects, recentPosts: posts } = data;
 </script>
 
@@ -25,13 +25,17 @@
   content={hero.content}
 />
 
-<!--
-
 <Facts title={facts.title} angle={facts.angle} facts={facts.facts} />
+
+<!--
 
 <About title={about.title} techs={about.techs} imageUrl={about.image} content={about.content} />
 
+-->
+
 <CardGrid cards={cardGrid.cards} content={cardGrid.content} />
+
+<!--
 
 <FeaturedProjects {projects} />
 
