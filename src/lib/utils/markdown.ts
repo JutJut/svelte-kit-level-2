@@ -1,6 +1,8 @@
 export async function getSectionsContent(section) {
   try {
-    const { default: body, metadata } = await import(`../../../src/content/sections/${section}.md`);
+    const { default: content, metadata } = await import(
+      `../../../src/content/sections/${section}.md`
+    );
 
     // TODO: Test below code esp. line 7-9
     // export async function load({ params }){
@@ -15,7 +17,7 @@ export async function getSectionsContent(section) {
     //   }
     // }
 
-    return { content: body, ...metadata };
+    return { content, ...metadata };
   } catch (error) {
     console.log(`Error importing sections content for ${section}: ${error}`);
   }
