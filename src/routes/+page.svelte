@@ -1,5 +1,5 @@
 <script lang="ts">
-  // import About from '$lib/sections/About.svelte';
+  import About from '$lib/sections/About.svelte';
   import CardGrid from '$lib/sections/CardGrid.svelte';
   import Contact from '$lib/sections/Contact.svelte';
   import Facts from '$lib/sections/Facts.svelte';
@@ -10,8 +10,7 @@
   /** @type {import('./$types').PageData} */
   export let data;
 
-  const { contact = {}, hero = {}, facts = {}, cardGrid = {} } = data;
-  // const { hero, facts, about, cardGrid, contact, projects, recentPosts: posts } = data;
+  const { hero = {}, facts = {}, about = {}, cardGrid = {}, contact = {} } = data;
 </script>
 
 <svelte:head>
@@ -27,11 +26,7 @@
 
 <Facts title={facts.title} angle={facts.angle} facts={facts.facts} />
 
-<!--
-
 <About title={about.title} techs={about.techs} imageUrl={about.image} content={about.content} />
-
--->
 
 <CardGrid cards={cardGrid.cards} content={cardGrid.content} />
 
