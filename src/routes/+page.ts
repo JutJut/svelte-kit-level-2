@@ -22,9 +22,10 @@ import { getSectionsContent } from '../lib/utils/markdown';
 /** @type {import('./$types').PageLoad} */
 export async function load({ params }) {
   return {
+    // TODO: Refactor into single return value for sections
     hero: await getSectionsContent('hero'),
     facts: await getSectionsContent('facts'),
-    // about: getAbout(),
+    about: await getSectionsContent('about'),
     cardGrid: await getSectionsContent('cards'),
     // projects: getFeaturedProjects(),
     // recentPosts: getRecentPosts(),

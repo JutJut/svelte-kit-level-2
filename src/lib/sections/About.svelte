@@ -19,7 +19,9 @@
     </Lazy>
     <div>
       <Heading2>{title}</Heading2>
-      <div class="content">{@html content}</div>
+      <div class="content">
+        <svelte:component this={content} />
+      </div>
       <TechList {techs} />
     </div>
   </article>
