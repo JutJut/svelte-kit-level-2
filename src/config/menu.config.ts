@@ -1,10 +1,10 @@
-export interface MenuLink {
+export interface MenuItem {
   name: string;
   link: string;
   icon: string;
 }
 
-export const indexMenuLinks: MenuLink[] = [
+export const indexMenuItems: MenuItem[] = [
   {
     name: 'Projects',
     link: '/#projects',
@@ -27,7 +27,7 @@ export const indexMenuLinks: MenuLink[] = [
   },
 ];
 
-export const blogMenuLinks: MenuLink[] = [
+export const subRouteMenuItems: MenuItem[] = [
   {
     name: 'Portfolio',
     link: '/',
@@ -42,5 +42,10 @@ export const blogMenuLinks: MenuLink[] = [
     name: 'Tags',
     link: '/tags',
     icon: 'tags',
+  },
+  {
+    name: 'Projects',
+    link: '/projects',
+    icon: 'terminal',
   },
 ];
