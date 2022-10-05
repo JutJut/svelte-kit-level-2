@@ -17,9 +17,9 @@ cards:
     prefix: fas
     description: Display your most important projects in a dedicated section or list them on the projects sub page.
   - label: Components
-    icon: react
+    icon: js
     prefix: fab
-    description: Plenty of reusable components, mixins and with Emotion styled components are waiting for you.
+    description: Plenty of reusable components and Sass mixins are waiting for you.
   - label: Integrated Blog
     icon: feather-alt
     prefix: fas
