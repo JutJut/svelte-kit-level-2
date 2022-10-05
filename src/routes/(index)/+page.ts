@@ -1,4 +1,4 @@
-import { getSectionsContent } from '../lib/utils/markdown';
+import { getSectionsContent } from '$lib/utils/markdown';
 
 // function getAbout() {
 //   const { metadata, content } = process('src/content/sections/about.md');
