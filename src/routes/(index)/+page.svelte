@@ -5,12 +5,19 @@
   import Facts from '$lib/sections/Facts.svelte';
   // import FeaturedProjects from '$lib/sections/FeaturedProjects.svelte';
   import Hero from '$lib/sections/Hero.svelte';
-  // import RecentPosts from '$lib/sections/RecentPosts.svelte';
+  import RecentPosts from '$lib/sections/RecentPosts.svelte';
 
   /** @type {import('./$types').PageData} */
   export let data;
 
-  const { hero = {}, facts = {}, about = {}, cardGrid = {}, contact = {} } = data;
+  const {
+    hero = {},
+    facts = {},
+    about = {},
+    cardGrid = {},
+    contact = {},
+    recentPosts: posts = [],
+  } = data;
 </script>
 
 <svelte:head>
@@ -34,7 +41,9 @@
 
 <FeaturedProjects {projects} />
 
-<RecentPosts {posts} /> -->
+-->
+
+<RecentPosts {posts} />
 
 <Contact
   address={contact.address}
