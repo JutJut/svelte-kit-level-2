@@ -19,15 +19,16 @@
     <span>{day}</span>
   </div>
   {#if image}
-    <a aria-label={`recent posts ${post.metadata.title}`} href={link}>
-      <Lazy height={200}>
-        <Image src={image} alt={post.metadata.title} width="100%" animated={true} />
-      </Lazy>
-    </a>
+    <!-- <a aria-label={`recent posts ${post.metadata.title}`} href={link}> -->
+    <Lazy height={200}>
+      <Image src={image} alt={post.metadata.title} width="100%" animated={true} />
+    </Lazy>
+    <!-- </a> -->
   {/if}
   <TagList tags={post.metadata.tags} />
-  <a class="title-link" sveltekit:prefetch href={link}><Heading2>{post.metadata.title}</Heading2></a
-  >
+  <!-- <a class="title-link" sveltekit:prefetch href={link}> -->
+  <Heading2>{post.metadata.title}</Heading2>
+  <!-- </a> -->
   <div class="description"><p>{post.metadata.description}</p></div>
 </article>
 
