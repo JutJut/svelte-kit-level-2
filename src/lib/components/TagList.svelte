@@ -4,7 +4,10 @@
 
 <div class="container">
   {#each tags as tag}
-    <span class="tag"><a href="/tags/{tag}">#{tag}</a></span>
+    <span class="tag">
+      <!-- <a href="/tags/{tag.toLocaleLowerCase()}">#{tag}</a> -->
+      #{tag}
+    </span>
   {/each}
 </div>
 
