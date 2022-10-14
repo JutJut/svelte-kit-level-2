@@ -31,7 +31,9 @@
       target="_blank"
       rel="noopener"><Heading2>{title}</Heading2></a
     >
-    <div class="description">{@html content}</div>
+    <div class="description">
+      <svelte:component this={content} />
+    </div>
     <TechList {techs} />
     <div class="link-container">
       {#if repoLink}
