@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "author": "Knochenmark",
   "scripts": {
+    "start": "vite dev",
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
