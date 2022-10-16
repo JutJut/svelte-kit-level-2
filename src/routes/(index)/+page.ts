@@ -1,7 +1,6 @@
-import { getSectionsContent } from '$lib/utils/markdown';
-
-import { getPosts } from '../../lib/utils/get-posts';
-import { getProjects } from '../../lib/utils/get-projects';
+import { getPosts } from '../../lib/api/get-posts';
+import { getProjects } from '../../lib/api/get-projects';
+import { getSectionsContent } from '../../lib/api/markdown';
 
 async function getFeaturedProjects() {
   return (await getProjects()).filter((project) => project.featured);

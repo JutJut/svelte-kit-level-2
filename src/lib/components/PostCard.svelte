@@ -59,11 +59,11 @@
     font-weight: 500
     line-height: 1rem
 
-  .title-link
-    text-decoration: none
+  // .title-link
+  //   text-decoration: none
 
-    &:hover :global(h2)
-      color: var(--primary-color)
+  //   &:hover :global(h2)
+  //     color: var(--primary-color)
 
   .description
     white-space: pre-line

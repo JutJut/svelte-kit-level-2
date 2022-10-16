@@ -5,8 +5,7 @@
 <div class="container">
   {#each tags as tag}
     <span class="tag">
-      <!-- <a href="/tags/{tag.toLocaleLowerCase()}">#{tag}</a> -->
-      #{tag}
+      <a href="/tags/{tag.toLocaleLowerCase()}">#{tag}</a>
     </span>
   {/each}
 </div>
@@ -27,8 +26,7 @@
     text-transform: lowercase
     margin: 0 1rem 0.5rem 0
 
-    // TODO: Add link to each tag
-    // > a
-    //   color: var(--primary-color)
-    //   text-decoration: none
+    > a
+      color: var(--primary-color)
+      text-decoration: none
 </style>
