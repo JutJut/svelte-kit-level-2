@@ -1,13 +1,15 @@
 <script>
   import Heading1 from '$lib/components/Heading1.svelte';
   import Section from '$lib/components/Section.svelte';
+  import TechList from '$lib/components/TechList.svelte';
   // import { DarkPaginationNav, paginate } from 'svelte-paginate';
 
-  export let projects = [];
+  export let data = [];
+  const { projects } = data;
 
-  let items = projects;
-  let currentPage = 1;
-  let pageSize = 2;
+  // let items = projects;
+  // let currentPage = 1;
+  // let pageSize = 2;
   // $: paginatedProjects = paginate({ items, pageSize, currentPage });
 </script>
 
@@ -17,12 +19,11 @@
 
 <Section full={true}>
   <Heading1>Projects</Heading1>
-  <!-- {#each paginatedProjects as project}
+  {#each projects as project}
     <h2 class="title">{project.title}</h2>
-    FIXME: change content
-    {@html project.content}
+    <svelte:component this={project.content} />
     <TechList techs={project.techs} />
-  {/each} -->
+  {/each}
 
   <!-- TODO: Add custom styling -->
   <!-- <DarkPaginationNav
