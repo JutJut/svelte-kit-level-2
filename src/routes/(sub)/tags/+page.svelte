@@ -1,12 +1,14 @@
 <script>
+  import { base } from '$app/paths';
   import Heading1 from '$lib/components/Heading1.svelte';
   import Section from '$lib/components/Section.svelte';
   import Separator from '$lib/components/Separator.svelte';
   import TextLink from '$lib/components/TextLink.svelte';
 
-  export let tags = {};
+  /** @type {import('./$types').PageData} */
+  export let data;
 
-  $: tagCount = Object.entries(tags).length;
+  $: tagCount = Object.entries(data.tags).length;
 </script>
 
 <svelte:head>
@@ -18,9 +20,9 @@
     <Heading1>Tags</Heading1>
     <p>{tagCount} tags found.</p>
   </section>
-  <!-- {#if tagCount}
+  {#if tagCount}
     <Separator />
-    {#each Object.entries(tags) as [char, tagList]}
+    {#each Object.entries(data.tags) as [char, tagList]}
       <h2>{char.toUpperCase()}</h2>
       <div class="tag-link-container">
         {#each Object.entries(tagList) as [tag, { count, label }]}
@@ -30,7 +32,7 @@
         {/each}
       </div>
     {/each}
-  {/if} -->
+  {/if}
   <Separator />
   <TextLink link="/" label="Take me home" />
 </Section>
@@ -39,10 +41,10 @@
   .title :global(h1)
     margin-top: 3rem
 
-  // .tag-link-container
-  //   display: flex
-  //   flex-wrap: wrap
+  .tag-link-container
+    display: flex
+    flex-wrap: wrap
 
-  //   a
-  //     margin: 0.8rem
+    a
+      margin: 0.8rem
 </style>
