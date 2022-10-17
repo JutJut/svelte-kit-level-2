@@ -1,6 +1,7 @@
 <script lang="ts">
   import Heading1 from '$lib/components/Heading1.svelte';
   import Heading2 from '$lib/components/Heading2.svelte';
+  import Image from '$lib/components/Image.svelte';
   import Section from '$lib/components/Section.svelte';
   import TechList from '$lib/components/TechList.svelte';
   import Lazy from 'svelte-lazy';
@@ -15,7 +16,7 @@
   <Heading1>About Me</Heading1>
   <article>
     <Lazy height={200}>
-      <img width="100%" alt="me" src={imageUrl} />
+      <Image src={imageUrl} alt="me" width="100%" decorated={true} />
     </Lazy>
     <div>
       <Heading2>{title}</Heading2>
