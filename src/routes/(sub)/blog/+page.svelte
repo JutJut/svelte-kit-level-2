@@ -1,13 +1,15 @@
 <script>
+  import { base } from '$app/paths';
   import Heading1 from '$lib/components/Heading1.svelte';
   import Section from '$lib/components/Section.svelte';
   // import { DarkPaginationNav, paginate } from 'svelte-paginate';
 
-  export let posts = [];
+  export let data;
+  const { posts = [] } = data;
 
-  let items = posts;
-  let currentPage = 1;
-  let pageSize = 2;
+  // let items = posts;
+  // let currentPage = 1;
+  // let pageSize = 2;
   // $: paginatedPosts = paginate({ items, pageSize, currentPage });
 </script>
 
@@ -18,12 +20,12 @@
 <Section full={true}>
   <Heading1>Blog</Heading1>
   <p>{posts.length} posts found.</p>
-  <!-- {#each paginatedPosts as post}
+  {#each posts as post}
     <a href={`${base}/blog/${post.slug}`}>
-      <h2 class="title">{post.metadata.title}</h2>
-      <p>{post.metadata.description}</p>
+      <h2 class="title">{post.title}</h2>
+      <p>{post.description}</p>
     </a>
-  {/each} -->
+  {/each}
 
   <!-- TODO: Add custom styling -->
   <!-- <DarkPaginationNav

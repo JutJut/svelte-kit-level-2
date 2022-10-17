@@ -8,14 +8,10 @@ export async function getPosts() {
   for (const path in posts) {
     const { metadata } = await posts[path]();
     const slug = path.split('/').pop()?.slice(0, -3);
-    postArr.push({ slug, metadata });
+    postArr.push({ slug, ...metadata });
   }
 
   return postArr
-    .filter((post) => post.metadata?.published)
-    .sort(
-      (a, b) =>
-        (dayjs(b.metadata.date, 'MMM D, YYYY') as any) -
-        (dayjs(a.metadata.date, 'MMM D, YYYY') as any)
-    );
+    .filter((post) => post?.published)
+    .sort((a, b) => (dayjs(b.date, 'MMM D, YYYY') as any) - (dayjs(a.date, 'MMM D, YYYY') as any));
 }
