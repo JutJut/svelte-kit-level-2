@@ -32,7 +32,26 @@
   box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.02), 1px 1px 15px 0 rgba(0, 0, 0, 0.03)
   transition: transform var(--transition-normal), background-color var(--transition-normal), box-shadow var(--transition-slow)
 
-@mixin hover-scale
-  transition: transform var(--transition-fast) ease-in-out
-  &:hover
+@mixin img-hover-scale
+  overflow: hidden
+
+  >img
+    transition: transform var(--transition-fast) ease-in-out
+
+  &:hover > img
     transform: scale(1.1)
+
+@mixin img-border-decoration
+  position: relative
+  overflow: unset
+
+  &:after
+    z-index: -1
+    content: ''
+    position: absolute
+    bottom: -5px
+    right: -10px
+    width: 98%
+    height: 98%
+    border: 2px solid var(--primary-color)
+    transition: all ease var(--transition-fast)
