@@ -6,11 +6,11 @@
 
   export let post;
 
-  $: month = new Date(post.metadata.date).toLocaleDateString('en-EN', { month: 'short' });
-  $: day = new Date(post.metadata.date).toLocaleDateString('en-EN', { day: '2-digit' });
+  $: month = new Date(post.date).toLocaleDateString('en-EN', { month: 'short' });
+  $: day = new Date(post.date).toLocaleDateString('en-EN', { day: '2-digit' });
   $: link = `/blog/${post.slug}`;
 
-  $: image = post.metadata.image;
+  $: image = post.image;
 </script>
 
 <article class="post">
@@ -19,17 +19,17 @@
     <span>{day}</span>
   </div>
   {#if image}
-    <!-- <a aria-label={`recent posts ${post.metadata.title}`} href={link}> -->
-    <Lazy height={200}>
-      <Image src={image} alt={post.metadata.title} width="100%" animated={true} />
-    </Lazy>
-    <!-- </a> -->
+    <a aria-label={`recent posts ${post.title}`} href={link}>
+      <Lazy height={200}>
+        <Image src={image} alt={post.title} width="100%" animated={true} />
+      </Lazy>
+    </a>
   {/if}
-  <TagList tags={post.metadata.tags} />
-  <!-- <a class="title-link" sveltekit:prefetch href={link}> -->
-  <Heading2>{post.metadata.title}</Heading2>
-  <!-- </a> -->
-  <div class="description"><p>{post.metadata.description}</p></div>
+  <TagList tags={post.tags} />
+  <a class="title-link" href={link}>
+    <Heading2>{post.title}</Heading2>
+  </a>
+  <div class="description"><p>{post.description}</p></div>
 </article>
 
 <style lang="sass">

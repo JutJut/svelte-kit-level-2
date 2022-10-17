@@ -4,7 +4,7 @@ export async function getTags() {
   const posts = await getPosts();
 
   return posts
-    .map((post) => post.metadata.tags)
+    .map((post) => post.tags)
     .flatMap((x) => x)
     .reduce((acc, tag) => {
       const tags = { ...acc };

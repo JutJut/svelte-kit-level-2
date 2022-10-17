@@ -1,6 +1,6 @@
-import { getPosts } from '../../lib/api/get-posts';
-import { getProjects } from '../../lib/api/get-projects';
-import { getSectionsContent } from '../../lib/api/markdown';
+import { getPosts } from '$lib/api/get-posts';
+import { getProjects } from '$lib/api/get-projects';
+import { getSection } from '$lib/api/get-section';
 
 async function getFeaturedProjects() {
   return (await getProjects()).filter((project) => project.featured);
@@ -14,12 +14,12 @@ async function getRecentPosts() {
 /** @type {import('./$types').PageLoad} */
 export async function load({ params }) {
   return {
-    hero: await getSectionsContent('hero'),
-    facts: await getSectionsContent('facts'),
-    about: await getSectionsContent('about'),
-    cardGrid: await getSectionsContent('cards'),
+    hero: await getSection('hero'),
+    facts: await getSection('facts'),
+    about: await getSection('about'),
+    cardGrid: await getSection('cards'),
     projects: await getFeaturedProjects(),
     posts: await getRecentPosts(),
-    contact: await getSectionsContent('contact'),
+    contact: await getSection('contact'),
   };
 }

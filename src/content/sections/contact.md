@@ -8,6 +8,6 @@ address: 'Friesenstr. 123, Berlin, Germany'
   import Button from '$lib/components/Button.svelte';
 </script>
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy [Link to issues](https://github.com/Knochenmark/gatsby-starter-level-2/issues) tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+<Button text="Button in MDX" />
 
-<Button text="Testing MDX" />
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy [Link to issues](https://github.com/Knochenmark/gatsby-starter-level-2/issues) tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.

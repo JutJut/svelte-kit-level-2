@@ -1,4 +1,4 @@
-export async function getSectionsContent(section) {
+export async function getSection(section: string) {
   try {
     const { default: content, metadata } = await import(
       `../../../src/content/sections/${section}.md`
