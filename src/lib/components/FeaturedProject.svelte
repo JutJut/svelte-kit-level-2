@@ -29,7 +29,7 @@
       class="title-link"
       href={demoLink ? demoLink : repoLink ? repoLink : '#'}
       target="_blank"
-      rel="noopener"><Heading2>{title}</Heading2></a
+      rel="noreferrer"><Heading2>{title}</Heading2></a
     >
     <div class="description">
       <svelte:component this={content} />
@@ -40,7 +40,7 @@
         <a
           href={repoLink}
           target="_blank"
-          rel="noopener"
+          rel="noreferrer"
           title="Repository Link"
           aria-label={repoLinkLabel}
         >
@@ -51,7 +51,7 @@
         <a
           href={demoLink}
           target="_blank"
-          rel="noopener"
+          rel="noreferrer"
           title="Demo Link"
           aria-label={demoLinkLabel}
         >
