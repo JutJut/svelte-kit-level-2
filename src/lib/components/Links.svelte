@@ -32,7 +32,7 @@
 <div class="container">
   <div class="links">
     {#each links as { link, prefix, icon }}
-      <a href={link} target="_blank" rel="noopener" aria-label={`social link to ${link}`}>
+      <a href={link} target="_blank" rel="noreferrer" aria-label={`social link to ${link}`}>
         <FontAwesomeIcon icon={[prefix, icon]} size="lg" />
       </a>
     {/each}
