@@ -6,7 +6,7 @@
 </script>
 
 <nav>
-  {#each menuLinks as { link, name, prefix="fas", icon }}
+  {#each menuLinks as { link, name, prefix = "fas", icon }}
     <a
       class:active={$page.url.pathname === `/${link}`}
       href={link}

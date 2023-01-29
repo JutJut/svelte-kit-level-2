@@ -3,6 +3,6 @@
   "singleQuote": true,
   "useTabs": false,
   "trailingComma": "es5",
-  "allowParens": "always",
+  "arrowParens": "always",
   "htmlWhitespaceSensitivity": "strict"
 }
