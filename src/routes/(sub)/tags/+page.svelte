@@ -9,6 +9,7 @@
   export let data;
 
   $: tagCount = Object.entries(data.tags).length;
+  $: sortedTags = Object.entries(data.tags).sort((a, b) => a[0].localeCompare(b[0]));
 </script>
 
 <svelte:head>
@@ -22,7 +23,7 @@
   </section>
   {#if tagCount}
     <Separator />
-    {#each Object.entries(data.tags) as [char, tagList]}
+    {#each sortedTags as [char, tagList]}
       <h2>{char.toUpperCase()}</h2>
       <div class="tag-link-container">
         {#each Object.entries(tagList) as [tag, { count, label }]}
