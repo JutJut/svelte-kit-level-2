@@ -4,6 +4,6 @@
   .separator
     height: 1px
     width: 100%
-    margin-top: 3rem
+    margin: 2rem 0
     background-color: var(--body-color)
 </style>
