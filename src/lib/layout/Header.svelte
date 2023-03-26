@@ -2,8 +2,24 @@
   import { page } from '$app/stores';
   import Links from '$lib/components/Links.svelte';
   import Logo from '$lib/components/Logo.svelte';
+  import { FontAwesomeIcon } from 'fontawesome-svelte';
+  import { onMount } from 'svelte';
 
   export let menuLinks = [];
+  let isLightTheme = true
+  $: themeIcon = isLightTheme ? 'moon': 'sun';
+
+  onMount(()=>{
+    if ((window as any).__theme === 'dark') {
+      isLightTheme = false
+    }
+  })
+
+  function onToggleTheme() {
+    isLightTheme = !isLightTheme;
+    localStorage.setItem('theme', isLightTheme ? 'light': 'dark');
+    (window as any).__setUserTheme(isLightTheme ? 'light' : 'dark');
+  }
 </script>
 
 <header>
@@ -20,7 +36,12 @@
         >
       {/each}
     </nav>
-    <Links />
+    <div class="icon-container">
+      <Links />
+      <button class="theme-toggle" on:click={onToggleTheme}>
+        <FontAwesomeIcon icon={['fas', themeIcon]} size="lg" />
+      </button>
+    </div>
   </div>
 </header>
 
@@ -41,6 +62,9 @@
     height: 100%
     width: 100%
     padding: 0 calc((var(--space) / 2))
+
+    .icon-container
+      display: flex
 
   .home-link
     text-decoration: none
@@ -65,4 +89,21 @@
 
       &:hover
         color: var(--primary-color)
+
+
+  .theme-toggle
+    cursor: pointer
+    background: none
+    border: none
+    padding: 0
+    aspect-ratio: 1
+    font-size: 1rem
+    border-radius: 50%
+
+    > :global(svg)
+      margin: 0.5rem
+      color: var(--title-color)
+
+    &:hover > :global(svg)
+      color: var(--primary-color)
 </style>
