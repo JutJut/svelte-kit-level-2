@@ -6,9 +6,7 @@
       "$lib/*": ["lib/*"]
     },
     "rootDirs": ["..", "./types"],
-    "importsNotUsedAsValues": "error",
     "isolatedModules": true,
-    "preserveValueImports": true,
     "lib": ["esnext", "DOM", "DOM.Iterable"],
     "moduleResolution": "node",
     "module": "esnext",
