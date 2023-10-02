@@ -1,8 +1,8 @@
 <script lang="ts">
   import Heading2 from '$lib/components/Heading2.svelte';
+  import Image from '$lib/components/Image.svelte';
+  import TagList from '$lib/components/TagList.svelte';
   import Lazy from 'svelte-lazy';
-  import Image from './Image.svelte';
-  import TagList from './TagList.svelte';
 
   export let post;
 
