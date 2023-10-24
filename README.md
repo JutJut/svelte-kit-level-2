@@ -74,24 +74,23 @@ That's why we like to call our starter **Level 2** or short **LvL2**. The starte
 - Organized Projects by techs and Blog Posts by tags
 - Posts in Markdown
   - Syntax highlighting in code blocks
-- Pagination support
 - More to come!
 
 # Customize
 
 ## Change the Theme
 
-In order to change the colors of the theme you can just change the values of the css variables in the `src/lib/styles/variables.sass` file. Every color in the _CSS_ is based on those css variables. This allows you to quickly apply a different theme of your choice.
+In order to change the colors of the theme you can just change the values of the css variables in the `src/lib/styles/variables.sass` file. Every color in the _CSS_ is based on those css variables. This allows you to quickly apply a different theme of your choice. Currently supported are a default _light theme_ and a _dark theme_.
 
 ```scss
 body
   // Colors
-  --bg-color: #252839
-  --bg-content-color: #1b1d2a
-  --title-color: #fff
-  --body-color: #ced8de
-  --primary-color: #F1B631
-  --secondary-color: #f18731
+  --primary-color: #e63946
+  --secondary-color: #fb7756
+  --bg-color: #edede9
+  --bg-content-color: #e5e5e5
+  --title-color: #14213d
+  --body-color: #212529
   // Dimensions & Form
   --radius: 6px
   --space: 3.5rem
@@ -102,6 +101,7 @@ body
   --transition-normal: 0.4s
   --transition-slow: 0.6s
   // Misc
+  --disabled-color: #858f98
   --bg-code: rgba(0, 0, 0, 0.3)
   --border-color: rgba(255, 255, 255, 0.1)
 ```
