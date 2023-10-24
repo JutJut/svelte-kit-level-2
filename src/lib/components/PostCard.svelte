@@ -53,7 +53,7 @@
     height: 3rem
     width: 3rem
     color: var(--title-color)
-    background: var(--bg-code)
+    background: var(--bg-code-color)
     align-items: center
     border-radius: var(--radius)
     font-weight: 500

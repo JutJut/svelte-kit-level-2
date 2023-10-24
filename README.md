@@ -102,7 +102,7 @@ body
   --transition-normal: 0.4s
   --transition-slow: 0.6s
   // Misc
-  --bg-code: rgba(0, 0, 0, 0.3)
+  --bg-code-color: rgba(0, 0, 0, 0.3)
   --border-color: rgba(255, 255, 255, 0.1)
 ```
 
